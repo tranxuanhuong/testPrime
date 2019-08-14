@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="nhapNT">
+<input type="button" value="Display" onclick="checksnt()">
+<p id="1"></p>
+<script>
+    function check(a) {
+        if (a < 2){
+            return false;
+        } else {
+            for (let i =2; i < a; i++){
+                if (a % i === 0){
+                    return false;
+                }
+            }
+        } return true;
+    }
+    function checksnt() {
+        let num = parseFloat(document.getElementById("nhapNT").value);
+        if( check(num) == true){
+            document.getElementById("1").innerHTML = num + " là số nguyên tố";
+        }else{
+            document.getElementById("1").innerHTML = num + " không phải là số nguyên tố";
+        }
+
+    }
+
+
+
+</script>
+
+</body>
+</html>
